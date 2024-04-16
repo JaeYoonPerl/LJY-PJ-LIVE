@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+
+
+body{
+   
+}
+.res-area{
+    overflow: hidden;
+    height: 1200px;
+
+    
+}
+
+.sub-bar>.menu-box{
+    position: fixed;
+    background: #212C92;
+    border-bottom: none;
+    /* top: 10%; */
+    
+    
+}
+
+/* 서브 페이지  */
+
+.res-area{
+    margin: 0 auto;
+    width: 100%;
+    
+    
+    
+}
+/* 배경 */
+#res-area{
+    background: url(../images/img_wave2.svg) repeat-x bottom left;
+    
+    background-size: 248px auto;
+    left: 0;
+}
+
+/* 배경 오브젝트 */
+.res-area .imgSun{
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 650px);
+    animation: rotating 10s linear infinite;
+}
+
+@keyframes rotating {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.imgTree{
+    position: absolute;
+    top: 30%;
+    right: calc(50% - 650px);
+    
+}
+.imgCloud{
+    position: absolute;
+    top: 25%;
+    right: calc(50% - 750px);
+    animation: fish-bub-ani 5s ease infinite ;
+}
+.imgBird{
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 350px);
+    animation: fish-bub-ani 5s ease infinite ;
+}
+
+/* 서브 페이지 제목*/
+.s-title-box{
+    position: relative;
+    top: 15%;
+    padding-top: 10%;
+    margin: 0 auto;
+    text-align: center;
+    height: 12%;
+    width: 100%;
+    max-width: 1010px;
+}
+.tit{
+    font-size: 4rem;
+    line-height: 50px;
+    font-weight: 700;
+    color: #212C92;
+    
+}
+.s-title-box>p{
+    margin-top: 2%;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #666;
+    display: block;
+    font-weight: bold;
+
+}
+
+/* 서브 페이지 내용박스*/
+.reservBox{
+    position: relative;
+    margin-top: 105px;
+    padding: 0 100px;
+    top: 10%;
+}
+.reservBox ul{    
+    display: flex;
+    justify-content: space-between;
+}
+.reservBox li{
+    position: relative;
+    display: flex;
+    width: 480px;
+    height: 500px;
+    border: 2px solid #212C92;
+    background-color: #fff;
+    border-radius: 60px;
+    
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    gap: 0 20px;
+    transition: border-color 0.5s ease;
+   margin: 0 5px;
+    padding-top: 174px;
+
+}
+.reservBox li:hover{
+    border: 2px solid magenta;
+}
+
+.imgr{
+    position: absolute;
+    top: 45px;
+}
+.reservBox h3{
+    font-size: 41px;
+    color: #212C92;
+    font-weight: 700;
+    font-family: 'Poppins', Sans-serif;
+}
+
+.reservBox h3 em{
+    font-size: 41px;
+    /* font-weight: 700; */
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Poppins', Sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #212C92;
+    font-style: normal;
+}
+.reservBox p{
+    margin-top: 18px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-weight: bold;
+    text-align: center;
+    color: #000551;
+}
+.reservBox .reservchoice ul li strong {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-weight: bold;
+    color: #000551;
+}
+.reservchoice .btnBox {
+    margin-top: 118px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 75px;
+}
+.reservBox .reservchoice ul li .btn {
+    width: 210px;
+    line-height: 49px;
+    display: inline-block;
+   
+    height: 55px;
+    
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-weight: bold;
+    text-align: center;
+    color: #000551;
+    border: 2px solid #000551;
+    border-radius: 30px;
+    background-color: #fff;
+    font-family: 'Poppins', 'welcome', Sans-serif;
+    transition: all 0.5s;
+}
+.btn i{
+    display: inline-block;
+    width: 19px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url(../images/ico_calendar.svg) no-repeat 0 0;
+    background-size: 100%;
+    transition: all 0.5s;
+}
+.reservBox .reservchoice ul li .btn:hover {
+    color: #fff;
+    background-color: #000551;
+}
+
+.reservBox .reservchoice ul li .btn:hover i{
+    background: url(../images/ico_calender_wh.png) no-repeat 0 0;
+    background-size: 100%;
+}

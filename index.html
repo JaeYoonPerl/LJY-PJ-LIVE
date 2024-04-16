@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>휴가, 그 이상의 모든것. 클럽 리조트 PIC</title>
+        <link rel="shortcut icon" href="./images/favicon.png" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <!-- 메인JS 불러오기 : 모듈로 불러오기 -->
+        <script type="module" src="./js/main.js"></script>
+        <script>
+            // 로드구역
+            window.addEventListener("DOMContentLoaded", () => {
+                // 1.대상선정: .ham(이벤트/변경), .gnb(변경)
+                const ham = document.querySelector(".ham");
+                const gnb = document.querySelector(".gnb");
+                const resbtnW = document.querySelector(".WhiteR");
+                const resbtnB = document.querySelector(".blueR");
+                const bgTop =document.querySelector(".top-area");
+
+                // 2.이벤트설정
+                ham.onclick = () => {
+                    // 햄버거버튼 on넣기/빼기
+                    ham.classList.toggle("on");
+                    // GNB on넣기/빼기
+                    gnb.classList.toggle("on");
+                    // 상단영역 배경색
+                    bgTop.classList.toggle("on");
+
+                    // 예약버튼
+                    resbtnW.classList.toggle("on");
+                    resbtnB.classList.toggle("on");
+                }; /////////// click /////////////
+            }); //////////// 로드구역 ///////////////
+        </script>
+        
+    </head>
+    <body class="scbar">
+        <!-- 상단 이동 버튼 -->
+        <button onclick id="btn-back-to-top" title="위로 가기">
+        <img src="./images/btn_top.png" alt="위로가기"></button>
+    
+        <!-- 상단 영역  -->
+        <div class="top-area">
+            <header id="top-area ">
+                <div class="cont-box">
+                    <!-- 메뉴박스 -->
+                    <nav class="gnb">
+                            <!-- RESERVATION: dl -->
+                            <dl>
+                                <!-- 상위 메뉴 : dt -->
+                                <dt>
+                                    <a href="sub.html">RESERVATION</a>
+                                </dt>
+                                <!-- 하위 메뉴 : dd -->
+                                <dd>
+                                    <a href="sub.html">예약하기</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">자주하는 질문</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">문의</a>
+                                </dd>
+                            </dl>
+                            <!-- GUAM : dl -->
+                            <dl>
+                                <!-- 상위 메뉴 : dt -->
+                                <dt>
+                                    <a href="#">GUAM</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC괌 이용안내</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">일반서비스</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                            </dl>
+                            <!-- SAIPAN : dl -->
+                            <dl>
+                                <!-- 상위메뉴 Saipan : dt -->
+                                <dt>
+                                    <a href="#">SAIPN</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC괌 이용안내</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">일반서비스</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                            </dl>
+                            <!-- Notice : dl -->
+                            <dl>
+                                <!-- 상위메뉴 Notice : dt -->
+                                <dt>
+                                    <a href="#">NOTICE</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC사이판</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">COMMUNITY</a>
+                                </dd>
+                            </dl>
+                            <!-- 스토리메뉴 : dl -->
+                            <dl>
+                                <!-- 상위메뉴 COMMUNITY : dt -->
+                                <dt>
+                                    <a href="#">COMMUNITY</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC영상</a>
+                                </dd>
+                            </dl>
+                        
+                    </nav>
+                    <!-- 1-1. 햄버거 -->
+                    <div class="col-3">
+                         <!-- 햄버거버튼 -->
+                        <div class="ham">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- 메인로고 -->
+                    <div class="col-6">
+                        <div class="logo-box">
+                            <h1 class="main-logo">
+                                <a href="index.html">
+                                    <!-- <img src="./images/logo_w.png" alt="회사메인로고" /> -->
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- 예약버튼 -->
+                    <div class="col-3">
+                        <div class="res-box">
+                            <a href="sub.html" class="reservBtn WhiteR">
+                                <img src="./images/ico_calender_w.png" alt="예약버튼">RESERVATION
+                            </a>
+                            <a href="sub.html" class="reservBtn blueR">
+                                <img src="./images/ico_calendar_c.svg" alt="예약버튼">RESERVATION
+                            </a>
+                           
+                            <!-- <a href="#">RESERVATION</a> -->
+                        </div> 
+                </div>
+
+            </header>
+        </div>
+        
+        <!-- 배너 영역 -->
+        <div id="banner-area">
+            <section class="banner-area">
+                <!--  배경 -->
+                <div class="bg-video">
+                    <video class="bgvideo" muted autoplay loop>
+                        <source src="./videos/introvideo.mp4"/>
+                    </video>
+                </div>
+                <!-- 빠른메뉴 -->
+                <nav class="menu-box">
+                <ul>
+                    <li><a href="sub.html">RESERVATION</a></li>
+                    <li><a href="#">GUAM</a></li>
+                    <li><a href="#">SAIPAN</a></li>
+                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                </ul>
+                </nav>
+                <!-- 글자 배너 -->
+                <div class="txt-banner let-style">
+                </div>
+                <!-- 가상 이동 버튼 -->
+                <a href="#" class="abtn ab1"><img src="./images/btn_top.png" alt="왼쪽이동버튼"></a>
+                <a href="#" class="abtn ab2"><img src="./images/btn_top.png" alt="오른쪽이동버튼"></a>
+                
+                <!-- 블릿 -->
+                <div class="bot-box">
+                    <ol class="indic"></ol>
+                </div>
+                
+            </section>
+        </div>
+     
+        <!-- 3. PIC소개 영역 -->
+        <div id="intro-pic-area">
+            <section class="intro-pic-area inbox">
+                <!-- <h2 class="temp-tit">3. PIC소개영역</h2> -->
+                <div class="cont-box">
+                    <div class="col-12">
+                        <!-- 패턴박스 -->
+                        <div class="pBox1">
+                            <img src="./images/img_pattern1.png" alt="패턴1">
+                        </div>
+                        <div class="pBox2">
+                            <img src="./images/img_pattern3.png" alt="패턴1">
+                        </div>
+                        <div class="pBox3">
+                            <img src="./images/img_pattern1.png" alt="패턴1">
+                        </div>
+                        <!-- 원애니 1 -->
+                        <div class="cir-ani">
+                            <div class="cir1"></div>
+                            <div class="cir2"></div>
+                            <div class="cir3"></div>
+                            <div class="cir4"></div>
+                            <div class="cir5"></div>
+                        </div>
+                        <div class="cir-ani cir-box2">
+                            <div class="cir1"></div>
+                            <div class="cir2"></div>
+                            <div class="cir3"></div>
+                            <div class="cir4"></div>
+                            <div class="cir5"></div>
+                        </div>
+                        <div class="cir-ani cir-box3">
+                            <div class="cir1"></div>
+                            <div class="cir2"></div>
+                            <div class="cir3"></div>
+                            <div class="cir4"></div>
+                            <div class="cir5"></div>
+                        </div>
+                       
+                        <!-- 3-0. 타이틀박스 -->
+                        <div class="title-box">
+                            PIC의 모든 순간,<br />
+                            잊지 못할 특별한 행복의 순간이 됩니다
+                        </div>
+                        <div class="introbox">
+                            <ul>
+                                <li class="intro1">
+                                    <!-- 3-1.  ALL INCLUSIVERESORT -->
+                                    <div class="intro-images fir-img img-bound">
+                                        <img src="./images/intro01.jpg" alt="소개이미지01" />
+                                    </div>
+                                    <div class="intro-txt-box box-bound side-text">
+                                        <h3>ALL INCLUSIVE</h3>
+                                        <span>RESORT</span>
+                                        <p>
+                                            특급 호텔 숙박, 전 일정 식사, 대형 워터파크에서의<br />
+                                            모든 레저 스포츠 시설 이용은 물론 <br />
+                                            스포츠 강습과 장비 대여까지 모두 무료로 즐길 수<br />
+                                            있는 올 인크루시브(All Inclusive) 리조트입니다.<br />
+                                        </p>
+                                        
+                                    </div>
+                                </li>
+                                <!-- 스크롤 텍스트 1 -->
+                                <div class="scroll-txt scr-side1 side-text">
+                                    <em class="em1">PACIFIC</em>
+                                </div>
+                                <li class="intro2">
+                                    <!-- 3-2.  ACTIVITY PIC -->
+                                    <div class="intro-images sec-img img-bound">
+                                        <img src="./images/intro02.jpg" alt="소개이미지02" />
+                                    </div>
+                                    <div class="intro-txt-box box-bound side-text">
+                                        <h3 class="act-txt">ACTIVITY</h3>
+                                        <span class="sp-intro">PIC</span>
+                                        <p>남태평양의 아름다운 섬 괌과 사이판에 위치하여 있으며 PIC괌에는 70여 가지, PIC사이판에는 40여 가지의 액티비티가 준비되어 있습니다. 인공수족관과 라군카약(괌), 포인트 브레이크와 레이지 리버(사이판) 등 다양한 종류의 워터파크 시설이 있으며 해변에서는 세일링과 카약을 타거나 선베드에 누워 드넓게 펼쳐진 바다를 감상할 수 있습니다.</p>
+                                        
+                                    </div>
+                                </li>
+                                <!-- 스크롤 텍스트 2 -->
+                                <div class="scroll-txt scr-side2 side-text">
+                                    <em class="em2">ISLANDS</em>
+                                </div>
+                                <li class="intro3">
+                                    <!-- 3-3.  CLUB MATES -->
+
+                                    <div class="intro-images thr-img img-bound">
+                                        <img src="./images/intro03.jpg" alt="소개이미지03" />
+                                    </div>
+
+                                    <div class="intro-txt-box box-bound side-text">
+                                        <h3>CLUB</h3>
+                                        <span>MATES</span>
+                                        <p>어린 자녀들을 위한 수영장을 별도로 운영하고 있으며 언제 어디서나 친구가 되어주는 만능 엔터테이너 '클럽메이트'가 있어 더욱 즐거운 휴가가 펼쳐집니다. 만 4세부터 11세 이하 어린이를 무료로 돌봐주는 키즈클럽을 운영 중으로 자녀들은 세계 각국의 친구들과 함께 스포츠, 게임, 영화감상 등 다양한 놀이를 즐기며 영어와 친해집니다.</p>
+                                        
+                                    </div>
+                                </li>
+                                <!-- 스크롤 텍스트 3 -->
+                                <div class="scroll-txt scr-side1 side-text">
+                                    <em class="em3">CLUB</em>
+                                </div>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                  
+                </div>
+            </section>
+        </div>
+        <!-- 4. 마스코트 소개영역 -->
+        <div id="masco-area">
+            <section class="masco-area inbox">
+                <!-- <h2 class="temp-tit">4. 마스코트 소개영역</h2> -->
+                <div class="cont-box">
+                    <div class="col-12">
+                        <div class="cloud-box">
+                            <img src="./images/img_cloud.png" alt="구름">
+                        </div>
+                        <div class="masco-box">
+                            <div class="masco-img">
+                                <img src="./images/siheky_img.png" alt="마스코트" />
+                            </div>
+                            <div class="masco-txt">
+                                <div class="masco-tit-txt">
+                                    <h3>
+                                        <span>PIC</span><br />
+                                        MASCOT<br />
+                                        <span>SIHEKY</span>
+                                    </h3>
+                                </div>
+                                <div class="masco-intro-txt">
+                                    <p>
+                                        시해키는 멸종 위기에 처한 마이크로네시아의<br />
+                                        '킹피셔' 라는 천연새 보호 운동에 동참하고자 <br />
+                                        지정한 마스코트입니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 배경 오브젝트 애니 -->
+                        <div class="ani-box">
+                            <div class="fish1">
+                                <img src="./images/fish1.png" alt="물고기1" />
+                            </div>
+                            <div class="fish2">
+                                <img src="./images/fish2.png" alt="물고기2" />
+                            </div>
+                            <div class="fish3">
+                                <img src="./images/fish3.png" alt="물고기3" />
+                            </div>
+                            <div class="bubble1">
+                                <img src="./images/bubble_b.png" alt="큰물방울" />
+                            </div>
+                            <div class="bubble2">
+                                <img src="./images/bubble1.png" alt="중간물방울1" />
+                            </div>
+                            <div class="bubble3">
+                                <img src="./images/bubble1.png" alt="중간물방울2" />
+                            </div>
+                            <div class="bubble4">
+                                <img src="./images/bubble2.png" alt="작은물방울1" />
+                            </div>
+                            <div class="bubble5">
+                                <img src="./images/bubble2.png" alt="작은물방울2" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- 5. 사진관 -->
+        <div id="video-area">
+            <div class="wrap"></div>
+            <section class="video-area inbox">
+                <!-- <h2 class="temp-tit">5. 사진관</h2> -->
+                <div class="cont-box">
+                    <div class="col-12">
+                        <div class="video-list-box">
+                            <div class="inner-box">
+                                <div class="list-guam">
+                                    <h3>GUAM <span>POPULAR CONTENTS</span>GUAM <span>POPULAR CONTENTS</span>GUAM <span>POPULAR CONTENTS</span></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://youtu.be/SzdswMhq4nM" target="_blank">
+                                                <img src="./images/guam_01.jpg" alt="괌1" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/jP7HQv7YuPU" target="_blank">
+                                                <img src="./images/guam_02.jpg" alt="괌2" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/tSe8l94QnOo" target="_blank">
+                                                <img src="./images/guam_03.jpg" alt="괌3" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/eybVmxAt7GU" target="_blank">
+                                                <img src="./images/guam_04.jpg" alt="괌4" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/iq1Tr3QRUPw" target="_blank">
+                                                <img src="./images/guam_05.jpg" alt="괌5" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/AYIgy4GALnQ" target="_blank">
+                                                <img src="./images/guam_06.jpg" alt="괌6" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list-saipan">
+                                    <h3>SAIPAN <span>POPULAR CONTENTS</span> SAIPAN <span>POPULAR CONTENTS</span> SAIPAN <span>POPULAR CONTENTS</span></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://youtu.be/cea4dVGJEzc" target="_blank">
+                                                <img src="./images/saipan_01.jpg" alt="사이판" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/cea4dVGJEzc" target="_blank">
+                                                <img src="./images/saipan_02.jpg" alt="사이판" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/HdbH2bMwAFo" target="_blank">
+                                                <img src="./images/saipan_03.jpg" alt="사이판" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/cea4dVGJEzc" target="_blank">
+                                                <img src="./images/saipan_04.jpg" alt="사이판" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/cea4dVGJEzc" target="_blank">
+                                                <img src="./images/saipan_05.jpg" alt="사이판" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://youtu.be/HdbH2bMwAFo" target="_blank">
+                                                <img src="./images/saipan_06.jpg" alt="사이판" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 6. 하단영역 -->
+        <div id="footer-area">
+            <div class="wrap"></div>
+            
+            <footer class="footer-area inbox">
+                <!-- <h2 class="temp-tit">6. 하단영역</h2> -->
+                <div class="cont-box">
+                    <div class="col-8">
+                        <div class="footer-txt-box">
+                            <ul>
+                                <li>
+                                    <a href="#">개인정보 처리방침</a>
+                                </li>
+                                <li>
+                                    <a href="#">이메일무단수집거부</a>
+                                </li>
+                            </ul>
+                            <!-- 주소 -->
+                            <p>PIC Guam : 210 Pale San Vitores Road, Tumon Bay, Guam 96913 / Tel : +1 (671) 646-9171</p>
+                            <p>PIC Saipan : 779 Chalan Tun Thomas P. Sablan Road, Saipan, MP 96950 CNMI / Tel : +1 (670) 234-7976</p>
+                            <br /><br />
+                            <p>Copyright ⓒ Pacific Islands Club Co, Ltd. All right reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer-icon-box">
+                            <div class="footer-icon">
+                                <img src="./images/logo_w.png" alt="흰로고" />
+                                <p>마케팅제휴문의 E-mail : marketing@phrkorea.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+        </div>
+    </body>
+</html>

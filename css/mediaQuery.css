@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+
+/* 숨길 박스 */
+.col-none{display: none;}
+/* 보일 박스 */
+.col-block{display: block;}
+
+
+/* 최대 1000 px 이하 */
+@media screen and(max-width:1000px) {
+    
+} 
+/* 최대 1000px 이하 종료 */
+
+
+
+
+/* 최대 500xp 이하 시작  */
+
+@media screen and(max-width:1000px) {
+    
+} 
+
+/* 최대 500px 이하 종료 */
+
+

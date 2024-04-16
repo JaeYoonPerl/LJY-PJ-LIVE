@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+/* PIC PJ : 공통 클래스 CSS - core.css */
+/* 공통 셋팅을 위한 클래스 + 웹폰트 */
+
+/* 웹폰트 CDN */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap'); */
+/* 
+    0. 메뉴 등 일반체
+    font-family: 'Noto Sans KR', sans-serif;
+    1. 캐릭터 설명 제목체
+    font-family: 'Gugi', cursive;
+    2. 캐릭터 설명 내용체
+    font-family: 'Single Day', cursive;
+    3. 캐릭터 설명 한자체
+    font-family: 'ZCOOL KuaiLe', cursive;
+    4. 전체 공통체(메뉴 등)
+    font-family: 'Nanum Gothic', sans-serif;
+    */
+
+
+/************** 공통 클래스 **************/
+/* 임시표시타이틀 */
+.temp-tit{
+    position: absolute;
+    font-size: 2vw;
+    color: #ccc;
+}
+/* 중앙속박스 */
+.inbox{
+    /* 최대가로크기 */
+    max-width: 1360px;
+    padding: 0 20px;
+    /* 블록박스 중앙 정렬 */
+    margin: 0 auto;
+}
+
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'welcome', Sans-serif;
+}
+
+/* 스크롤바 디자인 클래스 */
+/* -webkit- 밴더사명(크롬,사파리) 접두어 */
+/* 클래스명 scbar */
+.scbar::-webkit-scrollbar{
+    /* 전체 스크롤바 크기변경 */
+    width: 7px;
+    
+}
+.scbar::-webkit-scrollbar-thumb{
+    /* 스크롤바 */
+    background-color: #555;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-track{
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
+}

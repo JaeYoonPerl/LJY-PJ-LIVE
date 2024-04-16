@@ -1,0 +1,891 @@
+@charset "utf-8";
+/* PIC PJ : 메인페이지 CSS - main.css */
+
+/* 리셋, 코어, 커먼 공통 외부 CSS 합치기 */
+@import url(./reset.css);
+@import url(./core.css);
+@import url(./common.css);
+/* 그리드 12 불러오기 */
+@import url(./grid_12_flex.css);
+@import url(./scroll.css);
+@import url(./sub.css);
+@import url(./mediaQuery.css);
+
+/* 공사중 표시 */
+body * {
+    /* outline: 2px dashed #ccc; */
+}
+
+body{
+    /* overflow-x: hidden */
+   
+}
+body>* {
+    overflow-x: hidden;
+  }
+.banner-area{
+    position: relative;
+    width: 100%;
+    height: calc(var(--vh, 1vh)* 100);
+    min-height: 770px;
+}
+
+
+/* 배너영역 */
+.bg-video{
+    
+   height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    
+}
+.bgvideo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* 퀵메뉴 */
+.menu-box{
+    position: absolute;
+    left: 0;
+    top: 10.7%;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+.menu-box ul{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-box li a{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #0000009d;
+}
+/* .menu-box ul li + li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 43%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 8, 8, 0.45);
+   
+    z-index: 20;
+} */
+
+/* 글자 배너 */
+.txt-banner{
+    /* position: fixed; */
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* outline: 2px dashed yellow; */
+
+    /* 글자설정 */
+    font-size: 5vw;
+    color: #fff;
+    white-space: nowrap;
+
+}
+/* 개별 배너 ul*/
+.txt-banner ul{
+display: flex;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, 50%);
+
+    transform-origin: top;
+    /* transform: rotateX(90deg); */
+
+/* 모두 투명 */
+opacity: 0;
+/* 트랜지션 */
+transition: 0.8s ease-out;
+
+}
+.txt-banner ul.on{
+    opacity: 1;
+    z-index: 1;
+    transform:translate(-50%,-50%);
+    
+}
+
+
+
+/* 글자 개별박스 셋팅 */
+.txt-banner li{
+    display: block;
+    font-size: 100px;
+    color: #fff;
+    font-family: 'Poppins', Sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
+
+.txt-banner p{
+    margin-top: 5%;
+    font-size: 2rem;
+}
+
+.txt-banner li span{
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
+
+
+/* 글자 애니메이션 */
+.let-style{
+/* 원근설정 */
+perspective: 100vh;
+}
+/* .let-style li{
+    transform:translateY(100%);
+    transform-origin: top;
+   
+    opacity: 0;    
+    transition: 1s ease-in;
+} */
+/* 등장클래스 .on */
+/* .let-style.on li{
+    transform:translateY(0);
+   
+    opacity: 1;    
+} */
+
+
+
+.bot-box{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 74px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 2;
+}
+
+/* 슬라이드 이동 버튼 */
+/*이동버튼*/
+.abtn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*Y축 중앙이동*/
+}
+
+/*왼쪽버튼*/
+.ab1 {
+    left: 50px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+    right: 50px;
+}
+
+
+/* 하단 텍스트 불릿 */
+
+.bot-box .indic{
+    display: flex;
+    width: 100%;
+}
+
+
+.indic li{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    background-color: transparent;
+    width: 100%;
+  
+}
+.indic span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Poppins', 'welcome', Sans-serif;
+    cursor: pointer;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.indic li.on span{
+   
+    opacity: 1;
+    text-shadow: 1px 1px 1px #747474;
+}
+
+/* 가상요소 바 */
+.indic li::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    bottom: 0;
+    height: 0.5rem;
+    background-color: magenta;
+  }
+  .indic li.on::before{
+    width: 100%;
+    transition: width 3s linear;
+  }
+
+
+
+
+/********************* PIC소개 영역 *********************/
+
+/* 소개 영역 제목 */
+#intro-pic-area{
+    padding-top: 5%;
+    background-color: #fff;
+    position: relative;
+    
+}
+#intro-pic-area .title-box{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: darkblue;
+    margin: 0 auto;
+    width: 100%;
+    /* padding-top: 50px; */
+}
+
+
+/* 소개영역 컨텐츠 */
+
+#intro-pic-area .introbox{
+
+   position: relative;
+   padding-top: 10vw;
+   
+}
+#intro-pic-area .introbox ul{
+    
+    text-align: center;
+}
+#intro-pic-area .introbox li{
+
+   display: flex;
+}
+
+/* 소개 이미지 형태 */
+#intro-pic-area .intro-images img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+/* 텍스트 박스 */
+#intro-pic-area .intro-txt-box{
+    position: absolute;
+    width: 500px;
+}
+
+/* 소개 소제목 텍스트 */
+#intro-pic-area h3{
+     position: relative;
+    display: block;
+    font-size: 10rem;
+    white-space: nowrap;
+    color: darkblue;
+}
+#intro-pic-area span{
+     position: relative;
+    display: block;
+    font-size: 10rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: darkblue;
+}
+#intro-pic-area .sp-intro{
+     position: relative;
+    display: block;
+    font-size: 10rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FF0099;
+}
+
+/* 소개글 */
+#intro-pic-area p{
+    padding-top: 1vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    display: block;
+    line-height: 1.8;
+    font-size: 2rem;
+    color: #666;;
+    font-weight: bold;
+}
+
+/* 스크롤 텍스트 */
+.introbox .em1{
+    font-size: 30rem;
+    font-style: normal;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #FF0099;
+}
+.introbox .em2{
+    font-size: 30rem;
+    font-style: normal;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #ff7b00;
+}
+.introbox .em3{
+    font-size: 30rem;
+    font-style: normal;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #212C92;
+}
+
+.intro2 .act-txt{
+    color: #FF0099 !important;
+}
+.intro2 p{
+    color: #fff !important;
+}
+
+
+/* 배경원 애니메이션 */
+.cir-ani{
+    position: sticky;
+    top: 10%;
+    
+    
+}
+.cir-ani>div{
+    position: absolute;
+    
+    border-radius: 50%;
+   
+    
+}
+
+.cir-ani .cir1{
+
+    left: 10%;
+    transform: translate(-50%, 100%);
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: cir-move1 5s ease-in-out infinite alternate;
+}
+.cir-ani .cir2{
+
+    left: 20%;
+    transform: translate(-50%, 200%);
+    width: 200px;
+    height: 200px;
+    background: magenta;
+    animation: cir-move2 6s ease-in-out infinite alternate;
+}
+.cir-ani .cir3{
+    left: 100%;
+    transform: translate(-50%, 0%);
+    width: 150px;
+    height: 150px;
+    background: orange;
+    animation: cir-move3 5s ease-in-out infinite alternate;
+}
+.cir-ani .cir4{
+    left: 70%;
+    transform: translate(-50%, 180%);
+    width: 280px;
+    height: 280px;
+    background: skyblue;
+    animation: cir-move4 7s ease-in-out infinite alternate;
+}
+.cir-ani .cir5{
+    
+    left: 80%;
+    transform: translate(-50%, 30%);
+    width: 180px;
+    height: 180px;
+    background: rgb(29, 250, 165);
+    animation: cir-move5 4s ease-in-out infinite alternate;
+}
+/* 원 애니 박스 */
+.cir-box2{
+    top: 45%;
+}
+.cir-box3{
+    top: 75%;
+}
+/* 패턴 이미지 */
+.pBox1{
+    position: absolute;
+    top: 30%;
+}
+.pBox2{
+    position: absolute;
+    top: 60%;
+    left: 74%;
+   
+}
+.pBox3{
+    position: absolute;
+    top: 90%;
+    left: 10%;
+}
+
+/* 위아래 반복 애니메이션 */
+@keyframes cir-move1 {
+    0%{
+        transform: translate(-50%, 100%);
+    }
+    50%{
+        transform: translate(-50%, 80%);
+    }
+    100%{
+        transform: translate(-50%, 100%);
+    }
+}
+@keyframes cir-move2 {
+    0%{
+        transform: translate(-50%, 200%);
+    }
+    50%{
+        transform: translate(-50%, 180%);
+    }
+    100%{
+        transform: translate(-50%, 200%);
+    }
+}
+@keyframes cir-move3 {
+    0%{
+        transform: translate(-50%, 0%);
+    }
+    50%{
+        transform: translate(-50%, 20%);
+    }
+    100%{
+        transform: translate(-50%, 0%);
+    }
+}
+@keyframes cir-move4 {
+    0%{
+        transform: translate(-50%, 180%);
+    }
+    50%{
+        transform: translate(-50%, 150%);
+    }
+    100%{
+        transform: translate(-50%, 180%);
+    }
+}
+@keyframes cir-move5 {
+    0%{
+        transform: translate(-50%, 30%);
+    }
+    50%{
+        transform: translate(-50%, 20%);
+    }
+    100%{
+        transform: translate(-50%, 30%);
+    }
+}
+
+.btnBoxM{
+    position: absolute;
+    z-index: 999;
+}
+
+.btnM{
+    width: 210px;
+    line-height: 49px;
+    display: inline-block;
+   position: absolute;
+    height: 55px;
+    
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-weight: bold;
+    text-align: center;
+    color: #000551;
+    border: 2px solid #000551;
+    border-radius: 30px;
+    background-color: #fff;
+    font-family: 'Poppins', 'welcome', Sans-serif;
+    transition: all 0.5s;
+    z-index: 999;
+}
+.btnBoxM:hover .btnM{
+    color: #fff;
+    background-color: #000551;
+}
+
+ 
+/* 5. 마스코트 소개영역 */
+.masco-area{
+    height: 740px;
+}
+/**************** 4. 마스코트 소개영역 ****************/
+
+#masco-area{
+    background: #212C92 url(../images/underSea.PNG) repeat-x bottom;
+    background-clip: content-box;
+    position: relative;
+    padding-top: 200px;
+}
+/* 상단 구름 */
+.cloud-box{
+    position: absolute;
+    left: -10%;
+    top: 0;
+    /* left: 0; */
+    z-index: -1; 
+    /* outline: 2px solid red; */
+}
+#masco-area .wrap{
+    position: absolute;
+    width: 100%;
+    height: 122px;
+    top: 0;
+    overflow: hidden;
+}
+
+/* 상단 파도1 */
+#masco-area::before {
+    content: '';
+    width: 300vw;
+    display: block;
+    position: absolute;
+    top: -5.6vw;
+    left: -15%;
+    margin-top: 200px;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
+    animation: footerwave 7s linear infinite;
+    background-size: 100vw auto;
+    height: 6.4vw;
+    
+    
+}
+
+@keyframes footerwave {
+    0%{transform: translate(-40% , 0%)}
+	50%{transform: translate(0% , 0%)}
+	100%{transform: translate(-40% , 0%)}
+}
+
+
+.masco-tit-txt{
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 20%;
+}
+.masco-intro-txt{
+    position: absolute;
+    display: block;
+    top: 60%;
+    left: 70%;
+}
+.masco-txt h3{
+    font-size: 8.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+.masco-txt p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+  
+}
+.masco-txt span{
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+}
+.masco-img{
+    position: absolute;
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    left: 40%;
+    top: 30%;
+    
+}
+/* 마스코트영역 물방울, 물고기 애니메이션 */
+.ani-box img{
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;   
+    /* 애니메이션 적용 */
+    animation: fish-bub-ani 5s ease-in-out infinite alternate;
+}
+/* 물고기 위치 */
+.fish1{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+.fish2{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+}
+.fish3{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+/* 물방울 위치 */
+.bubble1{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+.bubble2{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+.bubble3{
+    position: absolute;
+    top: 55%;
+    left: 70%;
+}
+.bubble4{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+.bubble5{
+    position: absolute;
+    top: 35%;
+    left: 70%;
+}
+
+
+/* 위아래 반복 애니메이션 */
+@keyframes fish-bub-ani {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(1vw);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/************************************** 영상관 **************************************/
+/* 6. 사진관 */
+.video-area{
+    height: 1100px;
+    
+}
+#video-area{
+    background-color: #fff;
+}
+#video-area .video-list-box{
+   
+   padding-top: 5vw;
+}
+.list-guam h3{
+    font-size: 8rem;
+    display: flex;
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
+    color: #212C92;
+}
+.list-saipan h3{
+    font-size: 8rem;
+    display: flex;
+    /* 글자 줄바꿈방지 */
+    white-space: nowrap;
+    color:#ff0099;
+}
+#video-area span{
+    font-size: 8rem;
+    display: flex;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #212C92;
+}
+#video-area ul{
+    display: flex; 
+    padding-left: 3vw;
+
+}
+#video-area ul li {
+    padding: 0.5vw;
+}
+#video-area ul li img{
+    height: 270px;
+    width: 480px; 
+}
+.list-guam{
+    position: relative;
+    
+    transform: translateX(-15%);
+    animation: guam-ani 60s linear infinite alternate;
+    padding-bottom: 5vw;
+}
+.list-saipan{
+    position: relative;
+    transform: translateX(-40%);
+    animation: saipan-ani 60s linear infinite alternate;
+}
+
+/* 애니메이션 guam 좌->우->좌 */
+@keyframes guam-ani {
+    0%{
+        transform: translateX(-15%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX(-15%);
+    } 
+}
+/* 애니메이션 Saipan 우 좌 우*/
+@keyframes saipan-ani {
+    0%{
+        transform: translateX(-40%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(-40%);
+    } 
+}
+/* 7. 하단영역 */
+.footer-area{
+    height: 200px;
+}
+/************* 7. 하단영역 *************/
+
+#footer-area{
+    background: #212C92;
+    background-clip: content-box;
+    position: relative;
+    padding-top: 122px;
+
+}
+#footer-area .wrap{
+    position: absolute;
+    width: 100%;
+    height: 122px;
+    top: 0;
+    overflow: hidden;
+}
+
+#footer-area .wrap::before {
+    content: '';
+    width: 300vw;
+    display: block;
+    position: absolute;
+    top: -5.6vw;
+    left: -15%;
+    margin-top: 135px;
+    background: transparent url(../images/siheky_wave.svg) repeat-x top left;
+    animation: footerwave 7s linear infinite;
+    background-size: 100vw auto;
+    height: 6.4vw;
+    
+}
+
+.footer-txt-box {
+   /* position: absolute; */
+   display: block;
+   top: 30%;
+   left:5%;
+   /* text-align: left; */
+}
+
+.footer-txt-box ul {
+    display: flex;
+}
+.footer-txt-box li:nth-child(2)::before{
+    content: '|';
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: .5rem;
+}
+
+.footer-txt-box ul li a{
+    color: #fff;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+.footer-txt-box p{
+    color: #fff;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+.footer-txt-box p:last-child{
+    color: #a3a3a3;
+    font-size: 1.5rem;
+    
+}
+
+.footer-icon-box{
+    position: relative;
+    display: block;
+    top: 30%;
+    left: 28%;
+}
+
+.footer-icon {
+    position: absolute;
+    /* top: 30%;
+    left: 78%; */
+   
+}
+.footer-icon p{
+    color: #a3a3a3;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+

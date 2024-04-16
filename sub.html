@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>휴가, 그 이상의 모든것. 클럽 리조트 PIC</title>
+        <link rel="shortcut icon" href="./images/favicon.png" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <!-- 서브JS 불러오기 : 모듈로 불러오기 -->
+        <script type="module" src="./js/sub.js"></script>
+        <script>
+            // 로드구역
+            window.addEventListener("DOMContentLoaded", () => {
+                // 1.대상선정: .ham(이벤트/변경), .gnb(변경)
+                const ham = document.querySelector(".ham");
+                const gnb = document.querySelector(".gnb");
+                const bgTop =document.querySelector(".top-area");
+
+                // 2.이벤트설정
+                ham.onclick = () => {
+                    // 햄버거버튼 on넣기/빼기
+                    ham.classList.toggle("on");
+                    // GNB on넣기/빼기
+                    gnb.classList.toggle("on");
+                    // 상단영역 배경색
+                    bgTop.classList.toggle("on");
+                }; /////////// click /////////////
+            }); //////////// 로드구역 ///////////////
+        </script>
+        
+    </head>
+    <body class="scbar">
+        <!-- 상단 이동 버튼 -->
+        <button onclick id="btn-back-to-top" title="위로 가기">
+        <img src="./images/btn_top.png" alt="위로가기"></button>
+    
+        <!-- 상단 영역  -->
+        <div class="top-area get sub-top">
+            <header id="top-area">
+                <div class="cont-box">
+                    <!-- 메뉴박스 -->
+                    <nav class="gnb">
+                            <!-- RESERVATION: dl -->
+                            <dl>
+                                <!-- 상위 메뉴 : dt -->
+                                <dt>
+                                    <a href="sub.html">RESERVATION</a>
+                                </dt>
+                                <!-- 하위 메뉴 : dd -->
+                                <dd>
+                                    <a href="sub.html">예약하기</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">자주하는 질문</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">문의</a>
+                                </dd>
+                            </dl>
+                            <!-- GUAM : dl -->
+                            <dl>
+                                <!-- 상위 메뉴 : dt -->
+                                <dt>
+                                    <a href="#">GUAM</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC괌 이용안내</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">일반서비스</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                            </dl>
+                            <!-- SAIPAN : dl -->
+                            <dl>
+                                <!-- 상위메뉴 Saipan : dt -->
+                                <dt>
+                                    <a href="#">SAIPN</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC괌 이용안내</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">일반서비스</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">예약하기</a>
+                                </dd>
+                            </dl>
+                            <!-- Notice : dl -->
+                            <dl>
+                                <!-- 상위메뉴 Notice : dt -->
+                                <dt>
+                                    <a href="#">NOTICE</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC괌</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">PIC사이판</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">COMMUNITY</a>
+                                </dd>
+                            </dl>
+                            <!-- 스토리메뉴 : dl -->
+                            <dl>
+                                <!-- 상위메뉴 COMMUNITY : dt -->
+                                <dt>
+                                    <a href="#">COMMUNITY</a>
+                                </dt>
+                                <!-- 하위메뉴: dd -->
+                                <dd>
+                                    <a href="#">PIC영상</a>
+                                </dd>
+                            </dl>
+                        
+                    </nav>
+                    <!-- 1-1. 햄버거 -->
+                    <div class="col-3">
+                         <!-- 햄버거버튼 -->
+                        <div class="ham">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- 메인로고 -->
+                    <div class="col-6">
+                        <div class="logo-box">
+                            <h1 class="main-logo">
+                                <a href="index.html">
+                                    <!-- <img src="./images/logo_w.png" alt="회사메인로고" /> -->
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- 예약버튼 -->
+                    <div class="col-3">
+                        <div class="res-box">
+                            <a href="sub.html" class="reservBtn WhiteR">
+                                <img src="./images/ico_calender_w.png" alt="예약버튼">RESERVATION
+                            </a>
+                            <a href="sub.html" class="reservBtn blueR">
+                                <img src="./images/ico_calendar_c.svg" alt="예약버튼">RESERVATION
+                            </a>
+                           
+                            <!-- <a href="#">RESERVATION</a> -->
+                        </div> 
+                </div>
+            </header>
+        </div>
+        <!-- 중간 메뉴바 -->
+        <div class="sub-bar">
+             <!-- 빠른메뉴 -->
+             <nav class="menu-box">
+                <ul>
+                    <li><a href="sub.html">RESERVATION</a></li>
+                    <li><a href="#">GUAM</a></li>
+                    <li><a href="#">SAIPAN</a></li>
+                    <li><a href="#">NOTICE</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                </ul>
+            <div class="wave-box">
+
+            </div>
+        </div>
+
+        <!-- 서브 비주얼 -->
+        <div id="res-area">
+            <section class="res-area inbox">
+                <div class="cont-box">
+                    <div class="col-12">
+                        <!-- 배경 오브젝트 -->
+                        <!-- 태양 -->
+                        <div class="imgSun">
+                            <img src="./images/img_sunny.svg" alt="태양">
+                        </div>
+                        <!-- 야자수 -->
+                        <div class="imgTree">
+                            <img src="./images/img_tree.svg" alt="야자수">
+                        </div>
+                        <!-- 구름 -->
+                        <div class="imgCloud">
+                            <img src="./images/img_cloud.svg" alt="구름">
+                        </div>
+                        <!-- 새 -->
+                        <div class="imgBird">
+                            <img src="./images/img_bird.svg" alt="새">
+                        </div>
+                        <div class="s-title-box">
+                            <h2 class="tit">예약하기</h2> 
+                            <p>PIC는 잊을 수 없는 최고의 여행 경험을 선사합니다.</p>
+                        </div>
+                        <div class="reservBox">
+                            <div class="reservchoice">
+                                <ul>
+                                    <!-- Guam -->
+                                    <li>
+                                        <div class="imgr">
+                                            <img src="./images/img_guam.svg" alt="Guam">
+                                        </div>
+                                        <h3>
+                                            <em>PIC</em>
+                                            Guam
+                                        </h3>
+                                        <p>
+                                            괌 최대규모의 워터파크에서 펼쳐지는 꿈같은<br>
+                                            즐거움이 가득한 곳
+                                        </p>
+                                        <strong>신규예약 및 변경/취소가 가능합니다.</strong>
+                                        <div class="btnBox">
+                                            <a href="#" target="_blank" class="btn"><i class="reserv"></i>RESERVATION</a>
+                                        </div>
+                                    </li>
+                                    <!-- Saipan -->
+                                    <li>
+                                        <div class="imgr">
+                                            <img src="./images/img_Saipan.svg" alt="Guam">
+                                        </div>
+                                        <h3>
+                                            <em>PIC</em>
+                                            Saipan
+                                        </h3>
+                                        <p>
+                                            모험과 짜릿함, 활동적인 여행을 즐기는<br>
+                                            당신을 위한 레포츠 천국
+                                        </p>
+                                        <strong>신규예약 및 변경/취소가 가능합니다.</strong>
+                                        <div class="btnBox">
+                                            <a href="#" target="_blank" class="btn"><i class="reserv"></i>RESERVATION</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+
+        <!-- 하단영역 -->
+        <!-- 6. 하단영역 -->
+        <div id="footer-area">
+            <div class="wrap"></div>
+            <footer class="footer-area inbox">
+                <!-- <h2 class="temp-tit">6. 하단영역</h2> -->
+                <div class="cont-box">
+                    <div class="col-8">
+                        <div class="footer-txt-box">
+                            <ul>
+                                <li>
+                                    <a href="#">개인정보 처리방침</a>
+                                </li>
+                                <li>
+                                    <a href="#">이메일무단수집거부</a>
+                                </li>
+                            </ul>
+                            <!-- 주소 -->
+                            <p>PIC Guam : 210 Pale San Vitores Road, Tumon Bay, Guam 96913 / Tel : +1 (671) 646-9171</p>
+                            <p>PIC Saipan : 779 Chalan Tun Thomas P. Sablan Road, Saipan, MP 96950 CNMI / Tel : +1 (670) 234-7976</p>
+                            <br /><br />
+                            <p>Copyright ⓒ Pacific Islands Club Co, Ltd. All right reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer-icon-box">
+                            <div class="footer-icon">
+                                <img src="./images/logo_w.png" alt="흰로고" />
+
+                                <p>마케팅제휴문의 E-mail : marketing@phrkorea.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>

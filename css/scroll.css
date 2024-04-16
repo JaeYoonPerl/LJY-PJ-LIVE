@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* 스크롤 글자 */
+.scroll-txt{
+    padding-top: 15rem;
+    
+}
+
+/*  소개영역 이미지 */
+#intro-pic-area .intro-images{
+    position: relative;
+    width: 409px;
+    height: 500px;
+    
+    transform: translateX(-50%);
+}
+
+
+/* 첫번째 소개 박스 */
+#intro-pic-area .fir-img{
+    left: 45%;
+}
+#intro-pic-area .intro1 h3{
+    transform: translate(0, 30%);
+}
+#intro-pic-area .intro1 span{
+    transform: translate(140%, 147%);
+}
+#intro-pic-area .intro1 p{
+    transform: translate(183%, -120%);
+}
+
+/* 두번째 소개 박스 */
+#intro-pic-area .sec-img{
+    left: 60%;
+}
+#intro-pic-area .intro2 h3{
+    transform: translate(20%, 42%);
+}
+#intro-pic-area .intro2 span{
+    transform: translate(168%, 147%);
+}
+#intro-pic-area .intro2 p{
+    transform: translate(0, -16%);
+}
+
+/* 세번째 소개 박스 */
+#intro-pic-area .thr-img{
+    left: 45%;
+}
+#intro-pic-area .intro3 h3{
+    transform: translate(0, 30%);
+}
+#intro-pic-area .intro3 span{
+    transform: translate(15%, 91%);
+}
+#intro-pic-area .intro3 p{
+    transform: translate(176%, -54%);
+}
+
+
+
+/* 스크롤시 텍스트 옆으로 이동 */
+/* 우측->좌측 */
+.scr-side1{
+    transform: translateX(50%);
+    transition: 1.2s ease-out ;
+}
+/* 스크롤 이동 클래스1 on */
+.scr-side1.on{
+    transform: translateX(20%);
+}
+
+/* 좌측-> 우측 */
+.scr-side2{
+    transform: translateX(-50%);
+    transition: 1.2s ease-out;
+}
+/* 스크롤 이동 클래스2 on */
+.scr-side2.on{
+    transform: translateX(-20%);
+}
+
+
+/* 인트로 텍스트박스 스크롤시 바운딩 */
+.box-bound{
+    transform: translateY(-10%);
+    transition: 3s ease-in-out;
+}
+.box-bound.on{
+    /* transform: translateY(10%); */
+    animation: bb-ani 3s ease-in-out 1 forwards;
+    
+}
+@keyframes bb-ani {
+    0%{
+        transform: translateY(-10%);
+    }
+    70%{
+        transform: translateY(10%);
+    }
+    100%{
+        transform: translateY(5%);
+    }
+}
+
+
+/* 인트로 박스 안 사진 따로 바운딩 */
+
+/* .img-bound{
+    transition: 1.2s ease-out;
+}
+.img-bound.on{
+    transform: translate(-50%, 5px);
+} */
+
+/*  스크롤시 배경색 변경 */
+#intro-pic-area{
+    background-color: #fff;
+    transition: 1.2s ease-in-out;
+}
+
+#intro-pic-area.on{
+    background-color: #212C92;
+}
